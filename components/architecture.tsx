@@ -156,7 +156,7 @@ export default function ArchitectureSection() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 ">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl animate-pulse"></div>
@@ -167,7 +167,7 @@ export default function ArchitectureSection() {
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative inline-block">
             Kubernetes 기반 확장 가능한 아키텍처
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
           </h2>

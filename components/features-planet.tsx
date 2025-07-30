@@ -1,12 +1,55 @@
 import Image from "next/image";
 import PlanetImg from "@/public/images/planet.png";
 import PlanetOverlayImg from "@/public/images/planet-overlay.svg";
-import PlanetTagImg01 from "@/public/images/planet-tag-01.png";
-import PlanetTagImg02 from "@/public/images/planet-tag-02.png";
-import PlanetTagImg03 from "@/public/images/planet-tag-03.png";
-import PlanetTagImg04 from "@/public/images/planet-tag-04.png";
+import {
+  FileText,
+  PenTool,
+  BarChart3,
+  MessageCircle,
+  Search,
+  Globe,
+} from "lucide-react";
 
 export default function FeaturesPlanet() {
+  const useCases = [
+    {
+      icon: FileText,
+      title: "문서 요약 및 분석",
+      description:
+        "대량의 문서를 자동으로 분석하고 핵심 내용을 추출하여 의사결정을 지원합니다. 계약서, 보고서, 연구자료 등을 빠르게 이해할 수 있습니다.",
+    },
+    {
+      icon: PenTool,
+      title: "회의록 자동 생성",
+      description:
+        "회의 내용을 실시간으로 기록하고 주요 결정사항, 액션 아이템을 자동으로 정리하여 회의 효율성을 극대화합니다.",
+    },
+    {
+      icon: BarChart3,
+      title: "시장조사 리포트",
+      description:
+        "다양한 데이터 소스를 분석하여 종합적인 시장 조사 리포트를 자동 생성합니다. 트렌드 분석과 인사이트 도출을 지원합니다.",
+    },
+    {
+      icon: MessageCircle,
+      title: "고객 지원 자동화",
+      description:
+        "고객 문의를 자동으로 분류하고 적절한 답변을 생성하여 고객 만족도를 높이고 응답 시간을 단축합니다.",
+    },
+    {
+      icon: Search,
+      title: "지식 검색 시스템",
+      description:
+        "기업 내부의 방대한 지식베이스에서 필요한 정보를 즉시 검색하고 관련 문서를 추천합니다.",
+    },
+    {
+      icon: Globe,
+      title: "다국어 번역 서비스",
+      description:
+        "글로벌 비즈니스를 위한 실시간 다국어 번역과 현지화 서비스를 제공하여 소통의 장벽을 해소합니다.",
+    },
+  ];
+
   return (
     <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -14,11 +57,10 @@ export default function FeaturesPlanet() {
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
             <h2 className="text-3xl font-bold text-gray-100 md:text-4xl mb-4">
-              단순한 챗봇을 넘어선 기업을 위한 통합 플랫폼
+              반복적인 문서 작업, 회의 정리, 고객 응대, 번역 업무까지
             </h2>
             <h2 className="text-xl text-gray-400 md:text-xl">
-              다양한 AI 에이전트, 도구, 시스템을 하나로 연결하여 복잡한 업무
-              프로세스를 자동화 및 최적화
+              OASIS는 다양한 업무를 자동화해 실질적인 변화를 만들어냅니다.
             </h2>
           </div>
           {/* Planet */}
@@ -41,34 +83,37 @@ export default function FeaturesPlanet() {
                     alt="Planet decoration"
                   />
                   <div>
-                    <Image
-                      className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg01}
-                      width={253}
-                      height={56}
-                      alt="Tag 01"
-                    />
-                    <Image
-                      className="absolute left-56 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-30 transition-opacity duration-500"
-                      src={PlanetTagImg02}
-                      width={241}
-                      height={56}
-                      alt="Tag 02"
-                    />
-                    <Image
-                      className="absolute -left-20 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-25 transition-opacity duration-500"
-                      src={PlanetTagImg03}
-                      width={243}
-                      height={56}
-                      alt="Tag 03"
-                    />
-                    <Image
-                      className="absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg04}
-                      width={251}
-                      height={56}
-                      alt="Tag 04"
-                    />
+                    {/* Floating Icons around Planet */}
+                    <div className="absolute left-5 top-6 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-80 transition-opacity duration-500">
+                      <div className="bg-blue-500/20 backdrop-blur-sm rounded-full p-3 border border-blue-500/30">
+                        <FileText className="w-6 h-6 text-blue-400" />
+                      </div>
+                    </div>
+                    <div className="absolute left-76 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-80 transition-opacity duration-500">
+                      <div className="bg-green-500/20 backdrop-blur-sm rounded-full p-3 border border-green-500/30">
+                        <PenTool className="w-6 h-6 text-green-400" />
+                      </div>
+                    </div>
+                    <div className="absolute -left-6 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-80 transition-opacity duration-500">
+                      <div className="bg-purple-500/20 backdrop-blur-sm rounded-full p-3 border border-purple-500/30">
+                        <BarChart3 className="w-6 h-6 text-purple-400" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-2 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500">
+                      <div className="bg-orange-500/20 backdrop-blur-sm rounded-full p-3 border border-orange-500/30">
+                        <MessageCircle className="w-6 h-6 text-orange-400" />
+                      </div>
+                    </div>
+                    <div className="absolute -right-10 top-32 z-10 animate-[float_4s_ease-in-out_infinite_0.5s_both] opacity-80 transition-opacity duration-500">
+                      <div className="bg-cyan-500/20 backdrop-blur-sm rounded-full p-3 border border-cyan-500/30">
+                        <Search className="w-6 h-6 text-cyan-400" />
+                      </div>
+                    </div>
+                    <div className="absolute left-20 bottom-6 z-10 animate-[float_4s_ease-in-out_infinite_1.5s_both] opacity-80 transition-opacity duration-500">
+                      <div className="bg-indigo-500/20 backdrop-blur-sm rounded-full p-3 border border-indigo-500/30">
+                        <Globe className="w-6 h-6 text-indigo-400" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -76,118 +121,23 @@ export default function FeaturesPlanet() {
           </div>
           {/* Grid */}
           <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 *:relative *:p-6 *:before:absolute *:before:bg-gray-800 *:before:[block-size:100vh] *:before:[inline-size:1px] *:before:[inset-block-start:0] *:before:[inset-inline-start:-1px] *:after:absolute *:after:bg-gray-800 *:after:[block-size:1px] *:after:[inline-size:100vw] *:after:[inset-block-start:-1px] *:after:[inset-inline-start:0] md:*:p-10">
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
+            {useCases.map((useCase, index) => {
+              const Icon = useCase.icon;
+              return (
+                <article
+                  key={index}
+                  className="group hover:bg-gray-800/50 transition-colors duration-300 rounded-lg"
                 >
-                  <path d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm2-4a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4Zm1 10a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H5Z" />
-                </svg>
-                <span>Instant Analytics</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M14.29 2.614a1 1 0 0 0-1.58-1.228L6.407 9.492l-3.199-3.2a1 1 0 1 0-1.414 1.415l4 4a1 1 0 0 0 1.496-.093l7-9ZM1 14a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H1Z" />
-                </svg>
-                <span>Metadata</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path
-                    d="M2.248 6.285a1 1 0 0 1-1.916-.57A8.014 8.014 0 0 1 5.715.332a1 1 0 0 1 .57 1.916 6.014 6.014 0 0 0-4.037 4.037Z"
-                    opacity=".3"
-                  />
-                  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm1.715-6.752a1 1 0 0 1 .57-1.916 8.014 8.014 0 0 1 5.383 5.383 1 1 0 1 1-1.916.57 6.014 6.014 0 0 0-4.037-4.037Zm4.037 7.467a1 1 0 1 1 1.916.57 8.014 8.014 0 0 1-5.383 5.383 1 1 0 1 1-.57-1.916 6.014 6.014 0 0 0 4.037-4.037Zm-7.467 4.037a1 1 0 1 1-.57 1.916 8.014 8.014 0 0 1-5.383-5.383 1 1 0 1 1 1.916-.57 6.014 6.014 0 0 0 4.037 4.037Z" />
-                </svg>
-                <span>SEO &amp; Performance</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M8 0a1 1 0 0 1 1 1v14a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Zm6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1a1 1 0 1 1 0 2h-1a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h1a1 1 0 1 1 0 2h-1ZM1 1a1 1 0 0 0 0 2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 1 0 0 2h1a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H1Z" />
-                </svg>
-                <span>Custom Code</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M10.284.33a1 1 0 1 0-.574 1.917 6.049 6.049 0 0 1 2.417 1.395A1 1 0 0 0 13.5 2.188 8.034 8.034 0 0 0 10.284.33ZM6.288 2.248A1 1 0 0 0 5.718.33 8.036 8.036 0 0 0 2.5 2.187a1 1 0 0 0 1.372 1.455 6.036 6.036 0 0 1 2.415-1.395ZM1.42 5.401a1 1 0 0 1 .742 1.204 6.025 6.025 0 0 0 0 2.79 1 1 0 0 1-1.946.462 8.026 8.026 0 0 1 0-3.714A1 1 0 0 1 1.421 5.4Zm2.452 6.957A1 1 0 0 0 2.5 13.812a8.036 8.036 0 0 0 3.216 1.857 1 1 0 0 0 .574-1.916 6.044 6.044 0 0 1-2.417-1.395Zm9.668.04a1 1 0 0 1-.041 1.414 8.033 8.033 0 0 1-3.217 1.857 1 1 0 1 1-.571-1.917 6.035 6.035 0 0 0 2.415-1.395 1 1 0 0 1 1.414.042Zm2.242-6.255a1 1 0 1 0-1.946.462 6.03 6.03 0 0 1 0 2.79 1 1 0 1 0 1.946.462 8.022 8.022 0 0 0 0-3.714Z" />
-                </svg>
-                <span>Localization</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M9 1a1 1 0 1 0-2 0v6a1 1 0 0 0 2 0V1ZM4.572 3.08a1 1 0 0 0-1.144-1.64A7.987 7.987 0 0 0 0 8a8 8 0 0 0 16 0c0-2.72-1.36-5.117-3.428-6.56a1 1 0 1 0-1.144 1.64A5.987 5.987 0 0 1 14 8 6 6 0 1 1 2 8a5.987 5.987 0 0 1 2.572-4.92Z" />
-                </svg>
-                <span>Canonical URL</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
+                  <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
+                    <Icon className="w-4 h-4 text-blue-500" />
+                    <span>{useCase.title}</span>
+                  </h3>
+                  <p className="text-[15px] text-gray-400 leading-relaxed">
+                    {useCase.description}
+                  </p>
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>
