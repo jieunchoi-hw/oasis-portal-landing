@@ -191,7 +191,7 @@ export default function ArchitectureSection() {
           ></div>
 
           {/* Timeline Items */}
-          <div className="space-y-20">
+          <div className="space-y-18">
             {architectureItems.map((item, index) => {
               const Icon = item.icon;
               const colors = getColorClasses(item.color);
@@ -210,21 +210,19 @@ export default function ArchitectureSection() {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   {/* Content Card */}
-                  <div className={`w-5/12 ${isLeft ? "pr-12" : "pl-12"}`}>
+                  <div className={`w-5/12 ${isLeft ? "pr-6" : "pl-6"}`}>
                     <div
                       className={`bg-white/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${colors?.border} ${colors?.shadow} shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group`}
                     >
                       {/* Icon Header */}
-                      <div className="flex items-center mb-6">
+                      <div className="flex items-center mb-4">
                         <div
                           className={`p-3 bg-gradient-to-r ${colors?.gradient} rounded-xl shadow-lg mr-4 group-hover:scale-110 transition-transform duration-300`}
                         >
                           <Icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h3
-                            className={`text-xl font-bold ${colors?.text} mb-1`}
-                          >
+                          <h3 className={`text-xl font-bold ${colors?.text} `}>
                             {item.title}
                           </h3>
                           <div
@@ -236,12 +234,12 @@ export default function ArchitectureSection() {
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-700 text-sm leading-relaxed mb-6">
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
                         {item.description}
                       </p>
 
                       {/* Feature List */}
-                      <div className="space-y-3">
+                      <div className="space-y-2">
                         {item.details.map((detail, detailIndex) => (
                           <div
                             key={detailIndex}
