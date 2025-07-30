@@ -13,8 +13,12 @@ export default function FeaturesPlanet() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
-            <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
-              Simple helps your teams work more efficiently together
+            <h2 className="text-3xl font-bold text-gray-100 md:text-4xl mb-4">
+              단순한 챗봇을 넘어선 기업을 위한 통합 플랫폼
+            </h2>
+            <h2 className="text-xl text-gray-400 md:text-xl">
+              다양한 AI 에이전트, 도구, 시스템을 하나로 연결하여 복잡한 업무
+              프로세스를 자동화 및 최적화
             </h2>
           </div>
           {/* Planet */}
