@@ -122,7 +122,7 @@ export default function FeaturesPlanet() {
                 <div className="absolute -bottom-4 right-10 text-5xl text-purple-400/70">
                   <Zap className="w-8 h-8 animate-bounce" />
                 </div>
-                <h2 className="text-xl font-bold text-gray-100 md:text-2xl xl:text-3xl leading-relaxed">
+                <h2 className="text-lg font-bold text-gray-100 md:text-xl lg:text-2xl xl:text-3xl leading-tight md:leading-relaxed">
                   AI 비서, 검색, 외부 도구, 자동화, 보안까지 통합한{" "}
                   <span className="relative">
                     <span className="font-black bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -249,7 +249,7 @@ function FeatureCard({ feature, index }: { feature: any; index: number }) {
               className={`w-8 h-8 ${feature.iconColor} group-hover:animate-pulse`}
             />
           </div>
-          <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-white group-hover:to-gray-300 transition-all duration-300 leading-tight">
+          <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-white group-hover:to-gray-300 transition-all duration-300 leading-tight">
             {feature.title}
           </h3>
         </div>
@@ -264,7 +264,7 @@ function FeatureCard({ feature, index }: { feature: any; index: number }) {
               <div className={`${feature.bulletColor} mr-3 mt-1 flex-shrink-0`}>
                 <div className="w-2 h-2 rounded-full bg-current animate-pulse"></div>
               </div>
-              <span className="text-gray-300 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+              <span className="text-gray-300 text-xs sm:text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                 {item}
               </span>
             </li>

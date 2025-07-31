@@ -167,11 +167,11 @@ export default function ArchitectureSection() {
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative inline-block">
             Kubernetes 기반 확장 가능한 아키텍처
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             클라우드 네이티브 기술을 기반으로 한 안정적이고 확장 가능한 플랫폼
             아키텍처
           </p>
@@ -222,7 +222,9 @@ export default function ArchitectureSection() {
                           <Icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h3 className={`text-xl font-bold ${colors?.text} `}>
+                          <h3
+                            className={`text-lg sm:text-xl font-bold ${colors?.text} leading-tight`}
+                          >
                             {item.title}
                           </h3>
                           <div
@@ -234,7 +236,7 @@ export default function ArchitectureSection() {
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                      <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-4">
                         {item.description}
                       </p>
 
@@ -250,9 +252,9 @@ export default function ArchitectureSection() {
                             }}
                           >
                             <div
-                              className={`w-2 h-2 ${colors?.bg} rounded-full mr-3 animate-pulse`}
+                              className={`w-2 h-2 rounded-full mr-3 flex-shrink-0 ${colors?.bg}`}
                             ></div>
-                            <span className="text-gray-600 text-sm font-medium">
+                            <span className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                               {detail}
                             </span>
                           </div>

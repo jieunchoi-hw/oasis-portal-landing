@@ -14,13 +14,18 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    AOS.init({
-      once: true,
-      disable: "phone",
-      duration: 700,
-      easing: "ease-out-cubic",
-    });
-  });
+    try {
+      AOS.init({
+        once: true,
+        disable: "phone",
+        duration: 700,
+        easing: "ease-out-cubic",
+        mirror: false,
+      });
+    } catch (error) {
+      console.warn("AOS initialization error:", error);
+    }
+  }, []);
 
   return (
     <>

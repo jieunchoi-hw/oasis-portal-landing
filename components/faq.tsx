@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useState } from "react";
 
 interface FAQItemProps {
   question: string;
@@ -52,14 +50,6 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps) {
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }, []);
 
   const faqData = [
     {

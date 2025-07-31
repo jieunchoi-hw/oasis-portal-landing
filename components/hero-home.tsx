@@ -22,15 +22,16 @@ export default function HeroHome() {
               data-aos-delay={150}
             ></div>
             <h1
-              className="mb-6 border-y text-5xl font-bold leading-relaxed bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 bg-clip-text text-transparent [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] md:text-5xl"
+              className="mb-6 border-y text-3xl sm:text-4xl md:text-5xl font-bold leading-tight sm:leading-relaxed bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 bg-clip-text text-transparent [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]"
               data-aos="zoom-y-out"
               data-aos-delay={400}
             >
-              AI 업무 자동화를 넘어서, <br /> AI Orchestration의 시작
+              AI 업무 자동화를 넘어서, <br className="hidden sm:block" /> AI
+              Orchestration의 시작
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-lg text-gray-700"
+                className="mb-8 text-base sm:text-lg text-gray-700 leading-relaxed"
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
